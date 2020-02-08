@@ -1,0 +1,43 @@
+{
+    "name": "eleazarbr/widget",
+    "description": "A widgets package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eleazar Resendez",
+            "email": "eleazar@eresendez.com",
+            "homepage": "https://eresendez.com"
+        }
+    ],
+    "homepage": "https://github.com/eleazarbr/widget",
+    "keywords": ["Laravel", "Widget"],
+    "require": {
+        "illuminate/support": "~5|~6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eleazarbr\\Widget\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eleazarbr\\Widget\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eleazarbr\\Widget\\WidgetServiceProvider"
+            ],
+            "aliases": {
+                "Widget": "Eleazarbr\\Widget\\Facades\\Widget"
+            }
+        }
+    }
+}
